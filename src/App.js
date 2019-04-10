@@ -1,26 +1,33 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
-import './App.css';
+import styled from 'styled-components';
+import DndTest from './dragndrop/dndtest';
+
+const AppWrapper = styled.div`
+  display: flex;
+  justify-content: center;
+  margin-top: 100px;
+`;
+
+const Container = styled.div``;
+
 
 class App extends Component {
+
+  constructor(props) {
+
+    super(props);
+    this.state = {
+
+    }
+  }
+
   render() {
     return (
-      <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <p>
-            Edit <code>src/App.js</code> and save to reload.
-          </p>
-          <a
-            className="App-link"
-            href="https://reactjs.org"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Learn React
-          </a>
-        </header>
-      </div>
+      <AppWrapper>
+        <Container>
+          <DndTest />
+        </Container>
+      </AppWrapper>
     );
   }
 }
